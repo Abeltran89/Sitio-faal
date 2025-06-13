@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAAL - Servicios de TI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9faff;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0056b3;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #cce4ff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #0056b3;
+      border-bottom: 3px solid #0056b3;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .services-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .services-list li {
+      background: #e3efff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 6px #c2d6ff;
+      font-weight: 600;
+    }
+    .promo {
+      background: #ffd700;
+      color: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 0 8px #e6c200;
+    }
+    .contact-info {
+      background: #e8f0fe;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 6px #a3b8ff;
+      font-size: 1rem;
+    }
+    .contact-info a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ccc;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FAAL - Servicios de TI</h1>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#promociones">Promociones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section id="servicios">
+      <h2>Servicios que ofrecemos</h2>
+      <ul class="services-list" id="services-list"></ul>
+    </section>
+
+    <section id="promociones">
+      <h2>Promociones actuales</h2>
+      <div class="promo" id="promo"></div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-info" id="contact-info"></div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 FAAL - Todos los derechos reservados
+  </footer>
+
+  <script>
+    // Datos dinámicos
+    const services = [
+      "Soporte técnico y mantenimiento de sistemas",
+      "Implementación de infraestructura de redes",
+      "Servicios administrados de TI",
+      "Consultoría en seguridad informática",
+      "Venta y configuración de equipo de cómputo"
+    ];
+
+    const promotion = "20% de descuento en mantenimiento preventivo durante el primer trimestre.";
+
+    const contact = {
+      email: "contacto@faal.mx",
+      phone: "+52 1 55 5555 5555",
+      address: "Calle Ejemplo 123, Ciudad, País"
+    };
+
+    // Renderizar servicios
+    const servicesList = document.getElementById("services-list");
+    services.forEach(service => {
+      const li = document.createElement("li");
+      li.textContent = service;
+      servicesList.appendChild(li);
+    });
+
+    // Renderizar promoción
+    document.getElementById("promo").textContent = promotion;
+
+    // Renderizar contacto
+    const contactDiv = document.getElementById("contact-info");
+    contactDiv.innerHTML = `
+      <p>Correo: <a href="mailto:${contact.email}">${contact.email}</a></p>
+      <p>Teléfono: <a href="tel:${contact.phone.replace(/\s+/g, '')}">${contact.phone}</a></p>
+      <p>Dirección: ${contact.address}</p>
+    `;
+  </script>
+</body>
+</html>
