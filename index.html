@@ -3,65 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAAL - Soluciones Tecnológicas</title>
+  <title>FAAL - Servicios de TI</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
+  <!-- HEADER -->
   <header>
     <div class="logo">FAAL</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
+      <ul class="menu">
+        <li><a href="#home">Inicio</a></li>
         <li class="dropdown">
-          <a href="#">Servicios ▾</a>
+          <a href="#servicios">Servicios</a>
           <ul class="submenu">
-            <li><a href="servicios/admin-ti.html">Servicios Administrados de TI</a></li>
-            <li><a href="servicios/especializados.html">Servicios Especializados</a></li>
-            <li><a href="servicios/seguridad.html">Seguridad y Continuidad</a></li>
-            <li><a href="servicios/equipo.html">Venta y Arrendamiento de Equipo</a></li>
+            <li><a href="#servicio1">Infraestructura TI</a></li>
+            <li><a href="#servicio2">Automatización</a></li>
+            <li><a href="#servicio3">Seguridad & Continuidad</a></li>
+            <li><a href="#servicio4">Soporte</a></li>
+            <li><a href="#servicio5">Venta & Arrendamiento de equipo</a></li>
           </ul>
         </li>
-        <li><a href="promociones.html">Promociones</a></li>
-        <li><a href="soporte.html">Soporte</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="#promociones">Promociones</a></li>
+        <li><a href="#soporte">Soporte</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero con formulario de contacto -->
-  <section id="inicio" class="hero">
-    <h1>Soluciones Tecnológicas a tu Medida</h1>
-    <p>FAAL impulsa tu negocio con servicios de TI confiables, modernos y seguros.</p>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Impulsamos tu negocio con tecnología</h1>
+      <p>Servicios administrados de TI, soporte y soluciones innovadoras.</p>
+      <a href="#contacto" class="btn">Solicita tu asesoría</a>
+      <a href="https://wa.me/521XXXXXXXXXX" class="btn whatsapp" target="_blank">WhatsApp</a>
+    </div>
+  </section>
 
-    <form class="cta-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="tel" name="telefono" placeholder="Teléfono" required>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <button type="submit">Quiero más información</button>
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div id="servicio1" class="card">
+        <h3>Infraestructura TI</h3>
+        <p>Diseño, implementación y mantenimiento de tu infraestructura tecnológica.</p>
+      </div>
+      <div id="servicio2" class="card">
+        <h3>Automatización</h3>
+        <p>Automatizamos procesos para mejorar eficiencia y productividad.</p>
+      </div>
+      <div id="servicio3" class="card">
+        <h3>Seguridad & Continuidad</h3>
+        <p>Protección de datos, planes de recuperación y monitoreo 24/7.</p>
+      </div>
+      <div id="servicio4" class="card">
+        <h3>Soporte</h3>
+        <p>Atención personalizada y soporte técnico especializado.</p>
+      </div>
+      <div id="servicio5" class="card">
+        <h3>Venta & Arrendamiento</h3>
+        <p>Equipo de cómputo, servidores y periféricos con opciones flexibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOCIONES -->
+  <section id="promociones">
+    <h2>Promociones</h2>
+    <div class="promo-grid">
+      <div class="promo-card">
+        <h3>Paquete PYME</h3>
+        <p>Soporte y mantenimiento integral con descuento especial.</p>
+      </div>
+      <div class="promo-card">
+        <h3>Arrendamiento de equipo</h3>
+        <p>Accede a equipo de última generación con planes accesibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Nombre completo" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <input type="tel" placeholder="Teléfono" required>
+      <textarea placeholder="Escribe tu mensaje..."></textarea>
+      <button type="submit" class="btn">Enviar</button>
     </form>
   </section>
 
-  <!-- Sección Promociones destacadas -->
-  <section id="promos" class="promociones">
-    <h2>Promociones Actuales</h2>
-    <div class="promo-card">
-      <h3>50% de descuento en mantenimiento preventivo</h3>
-      <p>Válido hasta el 31 de Octubre.</p>
-    </div>
-    <div class="promo-card">
-      <h3>Arrendamiento de equipos sin costo de instalación</h3>
-      <p>Disponible en contratos anuales.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 FAAL. Todos los derechos reservados.</p>
   </footer>
-
-  <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/5215555555555" target="_blank" class="btn-whatsapp">💬</a>
 </body>
 </html>
