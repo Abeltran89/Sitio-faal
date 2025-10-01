@@ -1,167 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAAL - Servicios de TI</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f9faff;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #0056b3;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #cce4ff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: #0056b3;
-      border-bottom: 3px solid #0056b3;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
-    .services-list {
-      list-style: none;
-      padding-left: 0;
-    }
-    .services-list li {
-      background: #e3efff;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 6px #c2d6ff;
-      font-weight: 600;
-    }
-    .promo {
-      background: #ffd700;
-      color: #222;
-      padding: 1rem;
-      border-radius: 8px;
-      font-weight: 700;
-      text-align: center;
-      box-shadow: 0 0 8px #e6c200;
-    }
-    .contact-info {
-      background: #e8f0fe;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 6px #a3b8ff;
-      font-size: 1rem;
-    }
-    .contact-info a {
-      color: #0056b3;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ccc;
-      margin-top: 3rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAAL - Soluciones Tecnológicas</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>FAAL - Servicios de TI</h1>
+    <div class="logo">FAAL</div>
     <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#promociones">Promociones</a>
-      <a href="#contacto">Contacto</a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Servicios ▾</a>
+          <ul class="submenu">
+            <li><a href="servicios/admin-ti.html">Servicios Administrados de TI</a></li>
+            <li><a href="servicios/especializados.html">Servicios Especializados</a></li>
+            <li><a href="servicios/seguridad.html">Seguridad y Continuidad</a></li>
+            <li><a href="servicios/equipo.html">Venta y Arrendamiento de Equipo</a></li>
+          </ul>
+        </li>
+        <li><a href="promociones.html">Promociones</a></li>
+        <li><a href="soporte.html">Soporte</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
   </header>
-  <main>
-    <section id="servicios">
-      <h2>Servicios que ofrecemos</h2>
-      <ul class="services-list" id="services-list"></ul>
-    </section>
 
-    <section id="promociones">
-      <h2>Promociones actuales</h2>
-      <div class="promo" id="promo"></div>
-    </section>
+  <!-- Hero con formulario de contacto -->
+  <section id="inicio" class="hero">
+    <h1>Soluciones Tecnológicas a tu Medida</h1>
+    <p>FAAL impulsa tu negocio con servicios de TI confiables, modernos y seguros.</p>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <div class="contact-info" id="contact-info"></div>
-    </section>
-  </main>
+    <form class="cta-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <button type="submit">Quiero más información</button>
+    </form>
+  </section>
+
+  <!-- Sección Promociones destacadas -->
+  <section id="promos" class="promociones">
+    <h2>Promociones Actuales</h2>
+    <div class="promo-card">
+      <h3>50% de descuento en mantenimiento preventivo</h3>
+      <p>Válido hasta el 31 de Octubre.</p>
+    </div>
+    <div class="promo-card">
+      <h3>Arrendamiento de equipos sin costo de instalación</h3>
+      <p>Disponible en contratos anuales.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 FAAL - Todos los derechos reservados
+    <p>© 2025 FAAL. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    // Datos dinámicos
-    const services = [
-      "Soporte técnico y mantenimiento de sistemas",
-      "Implementación de infraestructura de redes",
-      "Servicios administrados de TI",
-      "Consultoría en seguridad informática",
-      "Venta y configuración de equipo de cómputo"
-    ];
-
-    const promotion = "20% de descuento en mantenimiento preventivo durante el primer trimestre.";
-
- const contact = {
-      email: "contacto@faal.com.mx",
-      phone: "+52 1 33 1197 5387",
-      address: "Ramon Alcorta 1362, Guadalajara, Jalisco"
-    };
-
-    // Renderizar servicios
-    const servicesList = document.getElementById("services-list");
-    services.forEach(service => {
-      const li = document.createElement("li");
-      li.textContent = service;
-      servicesList.appendChild(li);
-    });
-
-    // Renderizar promoción
-    document.getElementById("promo").textContent = promotion;
-
-    // Renderizar contacto
-    const contactDiv = document.getElementById("contact-info");
-    contactDiv.innerHTML = `
-      <p>Correo: <a href="mailto:${contact.email}">${contact.email}</a></p>
-      <p>Teléfono: <a href="tel:${contact.phone.replace(/\s+/g, '')}">${contact.phone}</a></p>
-      <p>Dirección: ${contact.address}</p>
-    `;
-  </script>
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/5215555555555" target="_blank" class="btn-whatsapp">💬</a>
 </body>
 </html>
