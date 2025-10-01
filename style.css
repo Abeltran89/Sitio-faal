@@ -1,0 +1,129 @@
+/* Colores base */
+:root {
+  --rojo-principal: #bb1822;
+  --rojo-secundario: #bb1233;
+  --azul-brillante: #0199cb;
+  --azul-marino: #005c99;
+  --gris-claro: #f4f4f4;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--azul-marino);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--rojo-principal); }
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.menu li a:hover { color: var(--azul-brillante); }
+
+/* Dropdown */
+.dropdown { position: relative; }
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.submenu li { margin: 0.5rem 0; }
+.submenu li a { color: var(--azul-marino); }
+.dropdown:hover .submenu { display: block; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { margin-bottom: 1.5rem; }
+.btn {
+  background: var(--azul-brillante);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn:hover { background: var(--azul-marino); }
+.btn.whatsapp { background: var(--rojo-principal); }
+.btn.whatsapp:hover { background: var(--rojo-secundario); }
+
+/* SECCIONES */
+section { padding: 3rem 2rem; }
+h2 { text-align: center; margin-bottom: 2rem; color: var(--azul-marino); }
+
+/* Servicios */
+.services-grid, .promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.card, .promo-card {
+  background: var(--gris-claro);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.card:hover, .promo-card:hover {
+  background: var(--rojo-secundario);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* CONTACTO */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 1rem;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form button { align-self: flex-start; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background: var(--azul-marino);
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
