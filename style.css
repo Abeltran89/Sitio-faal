@@ -147,9 +147,41 @@ footer{background:var(--azul-marino); color:#fff; padding:1rem 0; margin-top:2re
 }
 
 /* Responsive */
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-  .header-inner, .footer-inner{padding:0 1rem}
-  .nav .menu{gap:0.4rem}
-  .submenu{left:auto; right:0}
+/* 📱 Ajustes para pantallas más pequeñas */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .logo-img {
+    height: 80px;  /* un poco más chico */
+  }
+  .menu {
+    gap: 0.5rem;   /* reduce espacio en menú */
+    font-size: 0.95rem;
+  }
 }
+
+/* Celulares */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 60px;  /* logo más chico */
+  }
+
+  .menu {
+    flex-direction: column; /* menú en columna */
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 1rem;   /* reduce espacio */
+    text-align: center;
+  }
+
+  .cta form {
+    flex-direction: column; /* inputs uno debajo del otro */
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
