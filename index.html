@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAAL - Soluciones Tecnológicas</title>
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <a href="#home">
+          <img src="assets/logo.png" alt="Logo FAAL" class="logo-img">
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="#home">Inicio</a></li>
+
+          <li class="dropdown">
+            <button class="dropbtn" aria-expanded="false">Servicios ▾</button>
+            <ul class="submenu" role="menu">
+              <li><a href="#" data-service="infra">Servicios Administrados de TI</a></li>
+              <li><a href="#" data-service="automatizacion">Automatización</a></li>
+              <li><a href="#" data-service="seguridad">Seguridad & Continuidad</a></li>
+              <li><a href="#" data-service="equipo">Venta & Arrendamiento</a></li>
+              <li><a href="#" data-service="soporte">Soporte</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#promociones">Promociones</a></li>
+          <li><a href="#soporte">Soporte</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / CTA -->
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Soluciones Tecnológicas a tu Medida</h1>
+          <p>FAAL ofrece servicios administrados, automatización, seguridad y provisión de equipo con calidad y soporte especializado.</p>
+          <p class="hint">Rellena tus datos y te contactamos o conéctate ya por WhatsApp.</p>
+        </div>
+
+        <div class="hero-cta">
+          <form class="cta-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <button type="submit" class="btn primary">Quiero información</button>
+          </form>
+
+          <a class="btn whatsapp" href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener noreferrer">Conectar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS (lista + tarjetas) -->
+    <section id="servicios" class="section">
+      <h2>Nuestros Servicios</h2>
+      <p class="section-sub">Haz clic en cualquier servicio para ver más detalles.</p>
+
+      <div class="services-grid">
+        <article class="card">
+          <h3>Servicios Administrados de TI</h3>
+          <p>Gestión integral de infraestructura, operación y soporte proactivo 24/7.</p>
+          <button class="btn outline" data-service="infra">Ver más</button>
+        </article>
+
+        <article class="card">
+          <h3>Automatización</h3>
+          <p>Implementamos automatización de procesos y flujos para aumentar productividad.</p>
+          <button class="btn outline" data-service="automatizacion">Ver más</button>
+        </article>
+
+        <article class="card">
+          <h3>Seguridad & Continuidad</h3>
+          <p>Planes de continuidad, backups y seguridad perimetral / endpoint.</p>
+          <button class="btn outline" data-service="seguridad">Ver más</button>
+        </article>
+
+        <article class="card">
+          <h3>Venta & Arrendamiento</h3>
+          <p>Equipos, servidores y periféricos con opciones de compra y renta.</p>
+          <button class="btn outline" data-service="equipo">Ver más</button>
+        </article>
+
+        <article class="card">
+          <h3>Soporte</h3>
+          <p>Soporte técnico con SLAs, atención remota y en sitio.</p>
+          <button class="btn outline" data-service="soporte">Ver más</button>
+        </article>
+      </div>
+
+      <!-- AREA DONDE SE MUESTRA EL DETALLE -->
+      <div id="service-detail" class="service-detail hidden" aria-live="polite"></div>
+    </section>
+
+    <!-- PROMOCIONES -->
+    <section id="promociones" class="section gray">
+      <h2>Promociones</h2>
+      <div class="promo-grid">
+        <div class="promo-card">
+          <h3>Paquete PYME - 20% off</h3>
+          <p>Mantenimiento y monitoreo por 6 meses con precio especial.</p>
+        </div>
+        <div class="promo-card">
+          <h3>Arrendamiento sin instalación</h3>
+          <p>Planes anuales con instalación incluida durante la promoción.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOPORTE -->
+    <section id="soporte" class="section">
+      <h2>Soporte FAAL</h2>
+      <p>Si ya eres cliente, abre un ticket o escríbenos directamente a <a href="mailto:soporte@faal.mx">soporte@faal.mx</a></p>
+
+      <form id="support-form" class="support-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
+        <input type="text" name="cliente" placeholder="Nombre / Empresa" required>
+        <input type="email" name="email" placeholder="Correo de contacto" required>
+        <textarea name="detalle" placeholder="Describe el problema" required></textarea>
+        <button class="btn primary" type="submit">Enviar ticket</button>
+      </form>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section gray">
+      <h2>Contacto</h2>
+      <p>¿Prefieres que te contactemos por teléfono o correo? Déjanos tus datos:</p>
+
+      <form class="contact-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
+        <input type="text" name="nombre_contacto" placeholder="Nombre" required>
+        <input type="tel" name="telefono_contacto" placeholder="Teléfono" required>
+        <input type="email" name="email_contacto" placeholder="Correo" required>
+        <textarea name="mensaje_contacto" placeholder="Tu mensaje"></textarea>
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FLOATING WHATSAPP (visible siempre) -->
+  <a class="fab-whatsapp" href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    💬
+  </a>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2025 FAAL. Todos los derechos reservados.</p>
+      <p>Contacto: <a href="mailto:contacto@faal.mx">contacto@faal.mx</a> | Tel: +52 33 1234 5678</p>
+    </div>
+  </footer>
+
+  <!-- Script funcional -->
+  <script src="script.js"></script>
+</body>
+</html>
