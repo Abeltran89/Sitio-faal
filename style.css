@@ -1,229 +1,199 @@
-:root{
-  --rojo-principal: #bb1822;
-  --rojo-secundario: #bb1233;
-  --azul-brillante: #0199cb;
-  --azul-marino: #005c99;
-  --gris-claro: #f4f6f8;
-  --texto: #222;
-  --max-width: 1100px;
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Reset básico */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: "Montserrat", Arial, sans-serif;
-  color:var(--texto);
-  background:#fff;
-  -webkit-font-smoothing:antialiased;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-/* Layout */
-.header-inner, .footer-inner {
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:0 1rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #005c99;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Header */
-header{
-  background:var(--azul-marino);
-  color:#fff;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  padding:0.6rem 0;
-  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+.logo-img {
+  height: 60px;
+  width: auto;
 }
 
-.logo-img{
-  height:120px;
-  width:auto;
-  display:block;
-  img {
-  max-width: 100%;
-  height: auto;
-}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-/* Nav */
-.nav .menu{
-  list-style:none;
-  display:flex;
-  gap:1rem;
-  align-items:center;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.menu a, .dropbtn{
-  color:#fff;
-  text-decoration:none;
-  padding:0.5rem 0.6rem;
-  font-weight:600;
-  background:transparent;
-  border:none;
-  cursor:pointer;
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
 }
 
-.menu a:hover, .dropbtn:hover{
-  color:var(--azul-brillante);
+.submenu {
+  display: none;
+  position: absolute;
+  background: #0199cb;
+  list-style: none;
+  padding: 10px;
+  top: 30px;
 }
 
-/* Dropdown */
-.dropdown{position:relative}
-.submenu{
-  display:none;
-  position:absolute;
-  top:calc(100% + 8px);
-  left:0;
-  background: #fff;
-  color:var(--azul-marino);
-  padding:0.5rem;
-  border-radius:6px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.12);
-  min-width:220px;
-  list-style:none;
-}
-.submenu li{padding:0.15rem 0}
-.submenu li a{color:var(--azul-marino); text-decoration:none; display:block; padding:0.4rem 0.6rem}
-.dropdown:hover .submenu{display:block}
-
-/* HERO */
-.hero{
-  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('assets/hero-bg.jpg') center/cover no-repeat;
-  color:#ffffff;
-  padding:3.5rem 1rem;
-}
-.hero-grid{
-  max-width:var(--max-width);
-  margin:0 auto;
-  display:grid;
-  grid-template-columns: 1fr 360px;
-  gap:2rem;
-  align-items:center;
-}
-.hero h1{font-size:2.1rem; margin-bottom:0.6rem}
-.hero p{opacity:0.95}
-.hint{font-size:0.9rem; opacity:0.9}
-
-/* CTA form */
-.cta-form{background:rgba(255,255,255,0.95); padding:1rem; border-radius:8px; display:flex; flex-direction:column; gap:0.6rem}
-.cta-form input{padding:0.6rem; border-radius:6px; border:1px solid #ddd; font-size:0.95rem}
-.btn{display:inline-block; padding:0.6rem 1rem; border-radius:6px; cursor:pointer; text-decoration:none; text-align:center; font-weight:700}
-.btn.primary{background:var(--rojo-principal); color:#fff; border:none}
-.btn.primary:hover{background:var(--rojo-secundario)}
-.btn.whatsapp{display:block; margin-top:0.7rem; background:#25D366; color:#fff}
-
-/* SECTIONS */
-.section{padding:2.5rem 1rem}
-.section.gray{background:var(--gris-claro)}
-h2{font-size:1.6rem; color:var(--azul-marino); text-align:center; margin-bottom:0.8rem}
-.section-sub{ text-align:center; margin-bottom:1rem; color:#444 }
-
-/* Services grid */
-.services-grid{display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; max-width:var(--max-width); margin:1rem auto}
-.card{background:#fff; padding:1rem; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); transition:transform .18s, box-shadow .18s}
-.card h3{margin-bottom:0.5rem}
-.card p{font-size:0.95rem; margin-bottom:0.8rem}
-.card .btn.outline{background:transparent; border:2px solid var(--azul-brillante); color:var(--azul-brillante)}
-
-/* Service detail area */
-.service-detail{max-width:var(--max-width); margin:1.2rem auto; padding:1rem; background:#fff; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.06)}
-.service-detail.hidden{display:none}
-
-/* Promo grid */
-.promo-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; max-width:var(--max-width); margin:1rem auto}
-.promo-card{background:#fff; border-left:6px solid var(--azul-brillante); padding:1rem; border-radius:8px}
-
-/* Support & contact forms */
-.support-form, .contact-form{max-width:700px; margin:0.8rem auto; display:flex; flex-direction:column; gap:0.6rem}
-.support-form input, .support-form textarea, .contact-form input, .contact-form textarea{padding:0.6rem; border-radius:6px; border:1px solid #ddd}
-
-/* Footer */
-footer{background:var(--azul-marino); color:#fff; padding:1rem 0; margin-top:2rem}
-.footer-inner{display:flex; flex-direction:column; gap:0.4rem; text-align:center}
-
-/* Floating WhatsApp FAB */
-.fab-whatsapp{
-  position:fixed; bottom:18px; right:18px; background:#25D366; color:#fff; padding:0.7rem 0.9rem; border-radius:50%; font-size:1.3rem; text-decoration:none; box-shadow:0 6px 18px rgba(0,0,0,0.18);
+.dropdown:hover .submenu {
+  display: block;
 }
 
-/* Responsive */
-/* 📱 Ajustes para pantallas más pequeñas */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .logo-img {
-    height: 80px;  /* un poco más chico */
-  }
-  .menu {
-    gap: 0.5rem;   /* reduce espacio en menú */
-    font-size: 0.95rem;
-  }
+.submenu li {
+  margin: 5px 0;
 }
 
-/* Celulares */
-@media (max-width: 768px) {
-  .logo-img {
-    height: 60px;  /* logo más chico */
-  }
-
-  .menu {
-    flex-direction: column; /* menú en columna */
-    align-items: center;
-    font-size: 0.9rem;
-  }
-
-  .hero {
-    padding: 1rem;   /* reduce espacio */
-    text-align: center;
-  }
-
-  .cta form {
-    flex-direction: column; /* inputs uno debajo del otro */
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-  }
+.submenu li a {
+  color: white;
 }
-/* Botón hamburguesa oculto por defecto */
+
+/* ===== HAMBURGER ===== */
 .hamburger {
   display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
+  font-size: 28px;
   cursor: pointer;
-  color: white; /* ajusta según tu diseño */
 }
 
-/* Menú normal en escritorio */
-.menu {
+/* ===== BANNER ===== */
+.banner {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0199cb, #005c99);
+  color: white;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  margin: 20px auto;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 10px;
 }
 
-/* 📱 Para móviles */
+.contact-form input, 
+.contact-form textarea,
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #bb1822;
+  color: white;
+  cursor: pointer;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #25d366;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ===== SERVICIOS ===== */
+#servicios {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.servicio {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ===== PROMOCIONES ===== */
+#promociones {
+  padding: 40px 20px;
+  background: #eef6fb;
+  text-align: center;
+}
+
+.promo-card {
+  background: white;
+  border: 2px solid #0199cb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+/* ===== CONTACTO ===== */
+#contacto {
+  padding: 40px 20px;
+}
+
+#contacto textarea {
+  min-height: 100px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  background: #bb1822;
+  color: white;
+  padding: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* se muestra la hamburguesa */
-  }
-
-  .menu {
-    display: none; /* oculto inicialmente */
+  nav ul {
+    display: none;
     flex-direction: column;
+    background: #005c99;
     position: absolute;
-    top: 70px;  /* debajo del header */
-    right: 10px;
-    background: #0a0a0a; /* fondo oscuro */
-    padding: 1rem;
-    border-radius: 8px;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
   }
 
-  .menu.show {
-    display: flex; /* se muestra al dar click */
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .submenu {
+    position: static;
   }
 }
-
-
