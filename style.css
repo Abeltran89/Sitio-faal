@@ -203,3 +203,88 @@ footer {
     position: static;
   }
 }
+/* ===== SLIDER (BANNER DINÁMICO) ===== */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-slider .slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.banner-slider .slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-slider .slide .banner-content {
+  background: rgba(0, 0, 0, 0.5); /* oscurece la imagen para leer mejor el texto */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner-slider .slide h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.banner-slider .slide p {
+  margin-bottom: 15px;
+}
+
+.banner-slider .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #bb1822;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.banner-slider button.prev,
+.banner-slider button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.banner-slider button.prev { left: 15px; }
+.banner-slider button.next { right: 15px; }
+
+/* Responsive ajustes para móviles */
+@media (max-width: 768px) {
+  .banner-slider {
+    height: 300px;
+  }
+
+  .banner-slider .slide h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-slider .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
