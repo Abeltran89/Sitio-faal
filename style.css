@@ -188,4 +188,42 @@ footer{background:var(--azul-marino); color:#fff; padding:1rem 0; margin-top:2re
     margin: auto;
   }
 }
+/* Botón hamburguesa oculto por defecto */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* ajusta según tu diseño */
+}
+
+/* Menú normal en escritorio */
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 📱 Para móviles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* se muestra la hamburguesa */
+  }
+
+  .menu {
+    display: none; /* oculto inicialmente */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;  /* debajo del header */
+    right: 10px;
+    background: #0a0a0a; /* fondo oscuro */
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .menu.show {
+    display: flex; /* se muestra al dar click */
+  }
+}
+
 
