@@ -34,17 +34,47 @@
     </ul>
   </nav>
 
-  <!-- HOME -->
-  <section id="home" class="banner">
-    <h1>Bienvenido a FAAL</h1>
-    <p>Servicios administrados de TI para tu negocio</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Correo" required>
-      <input type="tel" placeholder="Teléfono" required>
-      <button type="submit">Solicitar Información</button>
-    </form>
-    <a href="https://wa.me/5210000000000" class="whatsapp-btn" target="_blank">Conectar por WhatsApp</a>
+  <!-- HOME (SLIDER) -->
+  <section id="home" class="banner-slider">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide active" style="background-image: url('assets/banner1.jpg');">
+        <div class="banner-content">
+          <h1>Bienvenido a FAAL</h1>
+          <p>Servicios administrados de TI para tu negocio</p>
+          <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" style="background-image: url('assets/banner2.jpg');">
+        <div class="banner-content">
+          <h1>Infraestructura</h1>
+          <p>Soluciones de servidores, redes y equipos de alto rendimiento</p>
+          <a href="#infraestructura" class="btn">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" style="background-image: url('assets/banner3.jpg');">
+        <div class="banner-content">
+          <h1>Automatización</h1>
+          <p>Optimiza tus procesos con tecnología inteligente</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide" style="background-image: url('assets/banner4.jpg');">
+        <div class="banner-content">
+          <h1>Seguridad</h1>
+          <p>Protección de datos y continuidad de negocio</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
   </section>
 
   <!-- SERVICIOS -->
@@ -91,13 +121,4 @@
       <textarea placeholder="Escribe tu mensaje"></textarea>
       <button type="submit">Enviar Mensaje</button>
     </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 FAAL - Todos los derechos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  </s
