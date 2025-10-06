@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAAL - Servicios de TI</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav>
     <div class="logo">
-      <img src="assets/logo.png" alt="FAAL Logo" class="logo-img">
+      <img src="assets/logo.png" alt="FAAL Logo" class="logo-img" />
     </div>
 
-    <!-- Botón hamburguesa -->
     <div class="hamburger" id="hamburger">☰</div>
 
-    <!-- Menú -->
     <ul id="menu">
       <li><a href="#home">Inicio</a></li>
       <li class="dropdown">
@@ -34,45 +32,28 @@
     </ul>
   </nav>
 
-  <!-- HOME (SLIDER) -->
+  <!-- SLIDER -->
   <section id="home" class="banner-slider">
     <div class="slides">
-      <!-- Slide 1 -->
       <div class="slide active" style="background-image: url('assets/banner1.jpg');">
-        <div class="banner-content">
-          <h1>Bienvenido a FAAL</h1>
-          <p>Servicios administrados de TI para tu negocio</p>
+        <div class="slide-content">
+          <h2>Soluciones de TI para tu empresa</h2>
+          <a href="#contacto" class="btn">Solicitar Información</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('assets/banner2.jpg');">
+        <div class="slide-content">
+          <h2>Infraestructura y soporte especializado</h2>
+          <a href="#servicios" class="btn">Ver servicios</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('assets/banner3.jpg');">
+        <div class="slide-content">
+          <h2>Seguridad, continuidad y automatización</h2>
           <a href="#contacto" class="btn">Contáctanos</a>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="slide" style="background-image: url('assets/banner2.jpg');">
-        <div class="banner-content">
-          <h1>Infraestructura</h1>
-          <p>Soluciones de servidores, redes y equipos de alto rendimiento</p>
-          <a href="#infraestructura" class="btn">Ver más</a>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide" style="background-image: url('assets/banner3.jpg');">
-        <div class="banner-content">
-          <h1>Automatización</h1>
-          <p>Optimiza tus procesos con tecnología inteligente</p>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="slide" style="background-image: url('assets/banner4.jpg');">
-        <div class="banner-content">
-          <h1>Seguridad</h1>
-          <p>Protección de datos y continuidad de negocio</p>
-        </div>
-      </div>
     </div>
-
-    <!-- Botones de navegación -->
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
   </section>
@@ -87,15 +68,15 @@
       </div>
       <div id="automatizacion" class="servicio">
         <h3>Automatización</h3>
-        <p>Mejora de procesos con herramientas inteligentes y optimización.</p>
+        <p>Mejora de procesos con herramientas inteligentes.</p>
       </div>
       <div id="seguridad" class="servicio">
         <h3>Seguridad</h3>
-        <p>Protección de datos, continuidad de negocio y prevención de amenazas.</p>
+        <p>Protección de datos y continuidad del negocio.</p>
       </div>
       <div id="soporte" class="servicio">
         <h3>Soporte</h3>
-        <p>Asistencia técnica especializada para mantener tu operación sin fallos.</p>
+        <p>Asistencia técnica especializada para mantener tu operación estable.</p>
       </div>
     </div>
   </section>
@@ -103,7 +84,6 @@
   <!-- PROMOCIONES -->
   <section id="promociones">
     <h2>Promociones</h2>
-    <p>Aprovecha nuestras ofertas en servicios de TI este mes.</p>
     <div class="promo-card">
       <h3>50% de descuento</h3>
       <p>En la primera implementación de servicios administrados.</p>
@@ -112,13 +92,22 @@
 
   <!-- CONTACTO -->
   <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Déjanos tus datos y un asesor se pondrá en contacto contigo.</p>
+    <h2>Contáctanos</h2>
     <form class="contact-form">
-      <input type="text" placeholder="Nombre completo" required>
-      <input type="email" placeholder="Correo electrónico" required>
-      <input type="tel" placeholder="Teléfono" required>
-      <textarea placeholder="Escribe tu mensaje"></textarea>
-      <button type="submit">Enviar Mensaje</button>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Correo" required />
+      <input type="tel" placeholder="Teléfono" required />
+      <textarea placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar</button>
     </form>
-  </s
+    <a href="https://wa.me/5210000000000" class="whatsapp-btn" target="_blank">Conectar por WhatsApp</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 FAAL - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
