@@ -1,48 +1,31 @@
-// ========== MENÚ HAMBURGUESA ==========
+// ===== Menú hamburguesa =====
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("show");
+});
 
-if (hamburger && menu) {
-  hamburger.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-}
-
-// ========== SLIDER ==========
-let currentSlide = 0;
+// ===== Slider =====
+let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
 
 function showSlide(index) {
-  if (slides.length === 0) return;
-
-  slides.forEach((slide, i) => {
-    slide.style.display = (i === index) ? "block" : "none";
+  if (index >= slides.length) slideIndex = 0;
+  if (index < 0) slideIndex = slides.length - 1;
+  slides.forEach((s, i) => {
+    s.style.transform = `translateX(${(i - slideIndex) * 100}%)`;
   });
 }
 
-// Botones de navegación (opcional)
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+next.addEventListener("click", () => { slideIndex++; showSlide(slideIndex); });
+prev.addEventListener("click", () => { slideIndex--; showSlide(slideIndex); });
 
-if (prevBtn && nextBtn) {
-  prevBtn.addEventListener("click", () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  });
+// Auto Slide
+setInterval(() => {
+  slideIndex++;
+  showSlide(slideIndex);
+}, 5000);
 
-  nextBtn.addEventListener("click", () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  });
-}
-
-// Cambio automático cada 5 segundos
-if (slides.length > 0) {
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 5000);
-
-  // Mostrar el primer slide al cargar
-  showSlide(currentSlide);
-}
+showSlide(slideIndex);
